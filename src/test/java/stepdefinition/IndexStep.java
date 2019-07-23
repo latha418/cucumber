@@ -1,7 +1,7 @@
 package stepdefinition;
 
 import cucumber.api.java.en.Given;
-import pages.IndexPage;
+import objectrepository.IndexPage;
 
 public class IndexStep extends BaseClass{
 	

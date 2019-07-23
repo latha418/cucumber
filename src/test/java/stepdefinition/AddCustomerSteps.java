@@ -8,7 +8,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import junit.framework.Assert;
-import pages.AddCustomerPage;
+import objectrepository.AddCustomerPage;
 
 public class AddCustomerSteps extends BaseClass {
 	@When("The user fill the add customer details")
@@ -75,13 +75,27 @@ public class AddCustomerSteps extends BaseClass {
 		   type(ap.getLname(), "latha");
 		   type(ap.getEmail(), "latha@gmail.com");
 		   type(ap.getAddress(), "address");
-		   Alert alert = driver.switchTo().alert();
-		   alert.accept();
-	    
+//		   Alert alert = driver.switchTo().alert();
+//		   alert.accept();
+//	    
 	}
 
 	@Then("The user should see pop up generated")
 	public void the_user_should_see_pop_up_generated() {
+		
+		
+        
+
+		try {
+			Alert alert=driver.switchTo().alert();
+			alert.accept();
+		}
+		catch(Throwable e) {
+			e.printStackTrace();
+		}
+	finally {
+		System.out.println("Hai");
+	}
 	   
 	}
 	
